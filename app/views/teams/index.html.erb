@@ -1,0 +1,5 @@
+<div class="container top-container last-container">
+  <% @teams.each do |team| %>
+    <%= link_to team.name, team_url(team.id)  %> | <%= team.abbrev %></p>
+  <% end %>
+</div>

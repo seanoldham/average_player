@@ -13,7 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20140412155057) do
 
-  create_table "batter_stats", force: true do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "batter_stats", force: :cascade do |t|
     t.integer  "batter_id",  null: false
     t.integer  "h",          null: false
     t.integer  "ab",         null: false
@@ -42,14 +45,14 @@ ActiveRecord::Schema.define(version: 20140412155057) do
 
   add_index "batter_stats", ["batter_id"], name: "index_batter_stats_on_batter_id", unique: true, using: :btree
 
-  create_table "batters", id: false, force: true do |t|
+  create_table "batters", id: false, force: :cascade do |t|
     t.integer  "id",                      null: false
     t.string   "first_name",              null: false
     t.string   "last_name",               null: false
-    t.integer  "bats",          limit: 1, null: false
-    t.integer  "throws",        limit: 1, null: false
-    t.integer  "pos",           limit: 1, null: false
-    t.integer  "jersey_number",           null: false
+    t.integer  "bats",          limit: 2, null: false
+    t.integer  "throws",        limit: 2, null: false
+    t.integer  "pos",           limit: 2, null: false
+    t.integer  "jersey_number"
     t.integer  "team_id",                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -58,7 +61,7 @@ ActiveRecord::Schema.define(version: 20140412155057) do
   add_index "batters", ["id"], name: "index_batters_on_id", unique: true, using: :btree
   add_index "batters", ["team_id"], name: "index_batters_on_team_id", using: :btree
 
-  create_table "teams", id: false, force: true do |t|
+  create_table "teams", id: false, force: :cascade do |t|
     t.integer  "id",         null: false
     t.integer  "league_id",  null: false
     t.string   "name",       null: false
