@@ -1,5 +1,7 @@
-<%= @team.name %>
-
+<div class="container">
+<h1><%= @team.name %></h1>
+<br>
 <% @batters.each do |batter| %>
-  <%= batter.first_name %> <%= batter.last_name %><br>
-  
+  <h4><%= batter.first_name %> <%= batter.last_name %></h4>
+<% end %>
+</div>

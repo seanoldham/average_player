@@ -5,6 +5,6 @@ class TeamsController < ApplicationController
 
   def show
     @team = Team.find params[:id]
-    @batters = Batter.find params[:team_id]
+    @batters = @team.batters    
   end
 end
