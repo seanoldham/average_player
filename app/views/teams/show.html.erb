@@ -2,6 +2,8 @@
 <h1><%= @team.name %></h1>
 <br>
 <% @batters.each do |batter| %>
-  <h4><%= batter.first_name %> <%= batter.last_name %></h4>
+  <% if batter.pos > 1 %>
+    <h4><%= batter.first_name %> <%= batter.last_name %> - <%= batter.batter_stat.batting_average.round(3).to_s[1..-1] %></h4>
+  <% end %>
 <% end %>
 </div>

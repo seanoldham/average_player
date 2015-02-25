@@ -60,10 +60,21 @@ class Batter < ActiveRecord::Base
       end
     end
 
+    def batter_average
+      Batter.all.each do |batter|
+        total_atbats = 0.000
+        total_hits = 0.000
+        total_atbats += batter.batter_stat.ab
+        total_hits += batter.batter_stat.h
+        average = total_hits / total_atbats
+        batter.batter_stat.batting_average = average
+        batter.batter_stat.save!
+      end
+    end
 
     def league_average
-      total_atbats = 0.0
-      total_hits = 0
+      total_atbats = 0.000
+      total_hits = 0.000
       Batter.all.each do |batter|
         total_atbats += batter.batter_stat.ab
         total_hits += batter.batter_stat.h

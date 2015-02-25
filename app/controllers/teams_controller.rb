@@ -1,11 +1,13 @@
 class TeamsController < ApplicationController
   def index
     @teams = Team.all
-    @avg = Batter.league_average.round(3)
+    @avg = Batter.league_average.round(3).to_s[1..-1]
+    @batter_avg = Batter.batter_average
   end
 
   def show
     @team = Team.find params[:id]
     @batters = @team.batters
+    @avg = Batter.batter_average
   end
 end
