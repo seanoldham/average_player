@@ -8,6 +8,5 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find params[:id]
     @batters = @team.batters
-    @avg = Batter.batter_average
   end
 end
