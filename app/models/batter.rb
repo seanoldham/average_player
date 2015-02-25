@@ -20,7 +20,7 @@
 #
 
 class Batter < ActiveRecord::Base
- self.primary_key = 'id'
+  self.primary_key = 'id'
   belongs_to :team
   has_one :batter_stat, foreign_key: :batter_id
 
@@ -58,6 +58,17 @@ class Batter < ActiveRecord::Base
         batter = find_or_initialize_by(id: attr[:id])
         batter.update!(attr)
       end
+    end
+
+
+    def league_average
+      total_atbats = 0.0
+      total_hits = 0
+      Batter.all.each do |batter|
+        total_atbats += batter.batter_stat.ab
+        total_hits += batter.batter_stat.h
+      end
+      total_average = total_hits / total_atbats
     end
 
     private
