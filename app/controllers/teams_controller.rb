@@ -8,5 +8,6 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find params[:id]
     @batters = @team.batters
+    @qualified = Batter.qualified_atbats
   end
 end

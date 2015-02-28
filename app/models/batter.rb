@@ -82,6 +82,15 @@ class Batter < ActiveRecord::Base
       total_average = total_hits / total_atbats
     end
 
+    def qualified_atbats
+      Batter.all.each do |batter|
+        if batter.batter_stat.tpa >= batter.batter_stat.league_games * 3.1
+          batter.batter_stat.qualified = false
+          batter.batter_stat.save!
+        end
+      end
+    end
+
     private
 
     def normarize(attr)

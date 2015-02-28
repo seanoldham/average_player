@@ -2,9 +2,10 @@
   <h1><%= @team.name %></h1>
   <br>
   <% @batters.each do |batter| %>
-    <% if batter.pos > 1 %>
+    <% if batter.pos != 1 %>
       <% if !batter.batter_stat.batting_average.nan? %>
         <h4><%= batter.first_name %> <%= batter.last_name %> - <%= number_with_precision(batter.batter_stat.batting_average.round(3), precision: 3).to_s[1..-1] %></h4>
+        <p><%= batter.batter_stat.qualified %></p>
       <% end %>
     <% end %>
   <% end %>
