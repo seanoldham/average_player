@@ -1,6 +1,6 @@
 <div class="container">
-  <h2>The average players are <%= @average_list %></h2>
   <h1>The league average is <%= @avg %></h1>
+  <h4>The average players are: <%= @average_list %></h4>
 
   <% @teams.each do |team| %>
     <%= link_to team.name, team_url(team.id)  %> | <%= team.abbrev %></p>
