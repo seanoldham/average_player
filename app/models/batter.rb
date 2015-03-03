@@ -106,7 +106,7 @@ class Batter < ActiveRecord::Base
     end
 
     def find_mr_average
-      
+      # Iterate through the hash and find the absolute value difference between the current value and the league average. I can create a variable to hold the lowest value, but how do I know which batter ID "wins"?
     end
 
     private
