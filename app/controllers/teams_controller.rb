@@ -3,6 +3,7 @@ class TeamsController < ApplicationController
     @teams = Team.all
     @avg = Batter.league_average.round(3).to_s[1..-1]
     @batter_avg = Batter.batter_average
+    @average_list = Batter.find_average_batters
   end
 
   def show
