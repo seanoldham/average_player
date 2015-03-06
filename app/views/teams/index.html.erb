@@ -1,9 +1,5 @@
-<div class="container">
-  <h1>The league average is <%= @avg %></h1>
-  <h2>The winner is <%= @mr_average %></h2>
-  <h4>The average players are: <%= @average_list %></h4>
-
-  <% @teams.each do |team| %>
-    <%= link_to team.name, team_url(team.id)  %> | <%= team.abbrev %></p>
-  <% end %>
-</div>
+<body id="team<%= @find_mr_average.team_id %>">
+  <div class="container text-center">
+    <p id="mr-average">Mr. Average is <%= @find_mr_average.first_name %> <%= @find_mr_average.last_name %></p>
+  </div>
+</body>

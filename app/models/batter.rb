@@ -116,7 +116,7 @@ class Batter < ActiveRecord::Base
           winner_id = k
         end
       end
-      return winner_id
+      return Batter.find_by_id(winner_id)
     end
 
     private

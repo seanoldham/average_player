@@ -1,3 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
+
+body {
+  font-family: 'Bitter', serif;
+}
 
 body.single-pane {
   background: #f6f6f6;
@@ -29,4 +34,198 @@ body.single-pane {
   background: #efefef;
   padding: 10px 0;
   margin-bottom: 10px;
+}
+
+#mr-average {
+  width: 100%;
+  font-size: 4em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+}
+
+#team108 {
+  // LAA
+  background: #B71234;
+  color: #002244;
+}
+
+#team109 {
+  // ARI
+  background: #A71930;
+  color: #000;
+}
+
+#team110 {
+  // BAL
+  background: #ED4C09;
+  color: #000;
+}
+
+#team111{
+  // BOS
+  background: #C60C30;
+  color: #002244;
+}
+
+#team112 {
+  // CHC
+  background: #003279;
+  color: #CC0033;
+}
+
+#team113 {
+  // CIN
+  background: #C6011F;
+  color: #fff;
+}
+
+#team114 {
+  // CLE
+  background: #003366;
+  color: #D30335;
+}
+
+#team115 {
+  // COL
+  background: #333366;
+  color: #000;
+}
+
+#team116 {
+  // DET
+  background: #001742;
+  color: #DE4406;
+}
+
+#team117 {
+  // HOU
+  background: #072854;
+  color: #FF7F00;
+}
+
+#team118 {
+  // KC
+  background: #15317E;
+  color: #74B4FA;
+}
+
+#team119 {
+  // LAD
+  background: #083C6B;
+  color: #FFF;
+}
+
+#team120 {
+  // WSH
+  background: #BA122B;
+  color: #11225B;
+}
+
+#team121 {
+  //NYM
+  background: #002C77;
+  color: #FB4F14;
+}
+
+#team133 {
+  // OAK
+  background: #003831;
+  color: #FFD800;
+}
+
+#team134 {
+  // PIT
+  background: #FDB829;
+  color: #000;
+}
+
+#team135 {
+  // SD
+  background: #002147;
+  color: #B4A76C;
+}
+
+#team136 {
+  // SEA
+  background: #0C2C56;
+  color: #005C5C;
+}
+
+#team137 {
+  // SF
+  background: #F2552C;
+  color: #000;
+}
+
+#team138 {
+  // STL
+  background: #C41E3A;
+  color: #FFF;
+}
+
+#team139 {
+  // TB
+  background: #00285D;
+  color: #9ECEEE;
+}
+
+#team140 {
+  // TEX
+  background: #BD1021;
+  color: #003279;
+}
+
+#team141 {
+  // TOR
+  background: #003DA5;
+  color: #041E42;
+}
+
+#team142 {
+  // MIN
+  background: #072754;
+  color: #C6011F;
+}
+
+#team143 {
+  // PHI
+  background: #BA0C2F;
+  color: #003087;
+}
+
+#team144 {
+  // ATL
+  background: #002F5F;
+  color: #B71234;
+}
+
+#team145 {
+  // CWS
+  background: #000;
+  color: #C0C0C0;
+}
+
+#team146 {
+  // MIA
+  background: #000;
+  color: #F9423A;
+}
+
+#team147 {
+  // NYY
+  background: #1C2841;
+  color: #FFF;
+}
+
+#team158 {
+  // MIL
+  background: #182B49;
+  color: #92754C;
 }
