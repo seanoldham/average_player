@@ -4,14 +4,10 @@
 #
 #  id         :integer          not null, primary key
 #  league_id  :integer          not null
-#  name       :string(255)      not null
-#  abbrev     :string(255)      not null
+#  name       :string           not null
+#  abbrev     :string           not null
 #  created_at :datetime
 #  updated_at :datetime
-#
-# Indexes
-#
-#  index_teams_on_id  (id) UNIQUE
 #
 
 require 'spec_helper'

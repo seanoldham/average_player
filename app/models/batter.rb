@@ -3,20 +3,15 @@
 # Table name: batters
 #
 #  id            :integer          not null, primary key
-#  first_name    :string(255)      not null
-#  last_name     :string(255)      not null
+#  first_name    :string           not null
+#  last_name     :string           not null
 #  bats          :integer          not null
 #  throws        :integer          not null
 #  pos           :integer          not null
-#  jersey_number :integer          not null
+#  jersey_number :integer
 #  team_id       :integer          not null
 #  created_at    :datetime
 #  updated_at    :datetime
-#
-# Indexes
-#
-#  index_batters_on_id       (id) UNIQUE
-#  index_batters_on_team_id  (team_id)
 #
 
 class Batter < ActiveRecord::Base
