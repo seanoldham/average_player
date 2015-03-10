@@ -25,5 +25,5 @@ job_type :sidekiq, "cd :path && :environment_variable=:environment bundle exec s
 
 every 1.minute do
   rake "scrape:all"
-  sidekiq "DailyWorker"
+  sidekiq "DailyWorker.perform"
 end
