@@ -10,9 +10,4 @@
 #
 
 class Snapshot < ActiveRecord::Base
-  
-    def self.average_id
-      return Batter.find_by_id(Snapshot.last.mr_average_id)
-    end
-
 end
