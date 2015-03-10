@@ -23,7 +23,7 @@ set :output, " ./log/cron_log.log"
 
 job_type :sidekiq, "cd :path && :environment_variable=:environment bundle exec sidekiq :task :output"
 
-every 1.minute do
+every 1.day, :at => '8:30 am' do
   rake "scrape:all"
-  sidekiq "DailyWorker.perform"
+  sidekiq "DailyJob.perform"
 end
