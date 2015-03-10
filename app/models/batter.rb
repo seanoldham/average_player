@@ -111,7 +111,15 @@ class Batter < ActiveRecord::Base
           winner_id = k
         end
       end
-      return Batter.find_by_id(winner_id)
+      return winner_id
+    end
+
+    def save_snapshot
+      self.find_average_batters
+      new_snapshot = Snapshot.new
+      new_snapshot.league_average = self.league_average
+      new_snapshot.mr_average_id = self.find_mr_average
+      new_snapshot.save!
     end
 
     private
