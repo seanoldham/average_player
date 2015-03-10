@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'sidekiq'
 gem 'whenever', :require => false
 
+gem 'rails_12factor', group: :production
+
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
