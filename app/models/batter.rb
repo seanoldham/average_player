@@ -80,6 +80,9 @@ class Batter < ActiveRecord::Base
     def qualified_atbats
       Batter.all.each do |batter|
         if batter.batter_stat.tpa >= batter.batter_stat.league_games * 3.1
+          batter.batter_stat.qualified = true
+          batter.batter_stat.save!
+        else
           batter.batter_stat.qualified = false
           batter.batter_stat.save!
         end
@@ -87,11 +90,11 @@ class Batter < ActiveRecord::Base
     end
 
     def find_average_batters
-      max = self.league_average.to_d + 0.010
-      min = self.league_average.to_d - 0.010
+      max = self.league_average.to_d + 0.050
+      min = self.league_average.to_d - 0.050
       average_list = {}
       Batter.all.each do |batter|
-        if !batter.batter_stat.qualified 
+        if batter.batter_stat.qualified 
           if batter.batter_stat.batting_average.to_d.between?(min, max)
             average_list[batter.id] = batter.batter_stat.batting_average
           end
