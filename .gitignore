@@ -17,6 +17,7 @@
 
 /config/secrets.yml
 /config/database.yml
+/config/newrelic.yml
 
 .DS_Store
 Guardfile
