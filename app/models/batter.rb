@@ -55,25 +55,9 @@ class Batter < ActiveRecord::Base
       end
     end
 
-    def batter_average
-      Batter.all.each do |batter|
-        total_atbats = 0.000
-        total_hits = 0.000
-        total_atbats += batter.batter_stat.ab
-        total_hits += batter.batter_stat.h
-        average = total_hits / total_atbats
-        batter.batter_stat.batting_average = average.round(5)
-        batter.batter_stat.save!
-      end
-    end
-
     def league_average
-      total_atbats = 0.000
-      total_hits = 0.000
-      Batter.all.each do |batter|
-        total_atbats += batter.batter_stat.ab
-        total_hits += batter.batter_stat.h
-      end
+      total_atbats = Batter.all.includes(:batter_stat).sum(:ab).to_d
+      total_hits = Batter.all.includes(:batter_stat).sum(:h).to_d
       return total_average = total_hits / total_atbats
     end
 
@@ -94,9 +78,9 @@ class Batter < ActiveRecord::Base
       min = self.league_average.to_d - 0.050
       average_list = {}
       Batter.all.each do |batter|
-        if batter.batter_stat.qualified 
-          if batter.batter_stat.batting_average.to_d.between?(min, max)
-            average_list[batter.id] = batter.batter_stat.batting_average
+        if batter.batter_stat.qualified
+          if batter.batter_stat.avg_sort.to_d.between?(min, max)
+            average_list[batter.id] = batter.batter_stat.avg_sort
           end
         end
       end

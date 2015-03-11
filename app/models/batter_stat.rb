@@ -53,7 +53,7 @@ class BatterStat < ActiveRecord::Base
         key = v.name.downcase
         v = v.value
         key = 'batter_' + key if key == "id"
-        normarized[key.to_sym] = v.to_i if BatterStat.
+        normarized[key.to_sym] = v.to_d if BatterStat.
           attribute_names.include? key
       end
       normarized
