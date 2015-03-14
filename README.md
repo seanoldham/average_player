@@ -2,4 +2,8 @@
 
 Pulls data from MLB's GameDay XML files and calculates the which player or players are nearest to the league average.
 
-To scrape for new data, run `rake scrape:all`
+## Updating Data
+
+Load *root/snapshot* and wait...
+
+To only scrape for new data, run `rake scrape:all`
