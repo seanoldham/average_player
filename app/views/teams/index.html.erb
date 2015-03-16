@@ -1,5 +1,7 @@
 <body id="team<%= @find_mr_average.team_id %>">
   <div class="container text-center">
     <p id="mr-average">Mr. Average is<br><%= @find_mr_average.first_name %> <%= @find_mr_average.last_name %></p>
+
+    <p id="links"><a id="team<%= @find_mr_average.team_id %>"  rel="tooltip" data-placement="top" title="Each day this page will update and show today's Mr. Average. He is calculated by batting average alone, but he must also qualify according to MLB Rule 10.22. For feature requests, bug reports, or inquiries, find me on Twitter @seanoldham.">How It Works</a> | Created by <a id="team<%= @find_mr_average.team_id %>" href="http://twitter.com/seanoldham">Sean Oldham</a></p>
   </div>
 </body>
