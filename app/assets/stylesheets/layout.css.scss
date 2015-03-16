@@ -50,17 +50,16 @@ body.single-pane {
 
 #links {
   width: 100%;
-  font-size: 1em;
+  font-size: 2em;
   position: absolute;
-  top: 96%;
+  top: 97%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  opacity: 0.6;
-  line-height: 3em;
+  opacity: 0.15;
 }
 
 #links a {
@@ -69,240 +68,184 @@ body.single-pane {
   position: relative;
 }
 
-.custom-tweet-button,
-.custom-follow-button {
-  width: 200px;
-  margin: 1em auto 2em;
-}  
-.custom-tweet-button a,
-.custom-follow-button a {
-  position: relative;
-  display: inline-block;
-  height: 16px;
-  padding: 2px;
-  border: 1px solid #ccc;
-  font-size: 11px;
-  color: #333;
-  text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  font-weight: bold;
-  background-color: #F8F8F8;
-  background-image: -webkit-gradient(linear,left top,left     bottom,from(#FFF),to(#DEDEDE));
-  background-image: -moz-linear-gradient(top,#FFF,#DEDEDE);
-  background-image: -o-linear-gradient(top,#FFF,#DEDEDE);
-  background-image: -ms-linear-gradient(top,#FFF,#DEDEDE);
-  border: #CCC solid 1px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  cursor: pointer;
-  overflow: hidden;
-}
-.custom-tweet-button a:hover,
-.custom-follow-button a:hover  {
-  border-color: #BBB;
-  background-color: #F8F8F8;
-  background-image: -webkit-gradient(linear,left top,left bottom,from(#F8F8F8),to(#D9D9D9));
-  background-image: -moz-linear-gradient(top,#F8F8F8,#D9D9D9);
-  background-image: -o-linear-gradient(top,#F8F8F8,#D9D9D9);
-  background-image: -ms-linear-gradient(top,#F8F8F8,#D9D9D9);
-  background-image: linear-gradient(top,#F8F8F8,#D9D9D9);
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.custom-tweet-button a .btn-icon,
-.custom-follow-button a .btn-icon{
-  position: absolute;
-  width: 16px;
-  height: 13px;
-  top: 50%;
-  left: 3px;
-  margin-top: -6px;
-  background: url('https://twitter.com/favicons/favicon.ico') 1px center no-repeat;
-  background-size: 13px;
-}
-.custom-tweet-button a .btn-text,
-.custom-follow-button a .btn-text{
-  display: inline-block;
-  padding: 2px 3px 0 20px;
+#tooltip {
 }
 
-#team108 {
+.team108 {
   // LAA
   background: #B71234;
   color: #002244;
 }
 
-#team109 {
+.team109 {
   // ARI
   background: #A71930;
   color: #000;
 }
 
-#team110 {
+.team110 {
   // BAL
   background: #ED4C09;
   color: #000;
 }
 
-#team111{
+.team111{
   // BOS
   background: #C60C30;
   color: #002244;
 }
 
-#team112 {
+.team112 {
   // CHC
   background: #003279;
   color: #CC0033;
 }
 
-#team113 {
+.team113 {
   // CIN
   background: #C6011F;
   color: #fff;
 }
 
-#team114 {
+.team114 {
   // CLE
   background: #003366;
   color: #D30335;
 }
 
-#team115 {
+.team115 {
   // COL
   background: #333366;
   color: #000;
 }
 
-#team116 {
+.team116 {
   // DET
   background: #001742;
   color: #DE4406;
 }
 
-#team117 {
+.team117 {
   // HOU
   background: #072854;
   color: #FF7F00;
 }
 
-#team118 {
+.team118 {
   // KC
   background: #15317E;
   color: #74B4FA;
 }
 
-#team119 {
+.team119 {
   // LAD
   background: #083C6B;
   color: #FFF;
 }
 
-#team120 {
+.team120 {
   // WSH
   background: #BA122B;
   color: #11225B;
 }
 
-#team121 {
+.team121 {
   //NYM
   background: #002C77;
   color: #FB4F14;
 }
 
-#team133 {
+.team133 {
   // OAK
   background: #003831;
   color: #FFD800;
 }
 
-#team134 {
+.team134 {
   // PIT
   background: #FDB829;
   color: #000;
 }
 
-#team135 {
+.team135 {
   // SD
   background: #002147;
   color: #B4A76C;
 }
 
-#team136 {
+.team136 {
   // SEA
   background: #0C2C56;
   color: #005C5C;
 }
 
-#team137 {
+.team137 {
   // SF
   background: #F2552C;
   color: #000;
 }
 
-#team138 {
+.team138 {
   // STL
   background: #C41E3A;
   color: #FFF;
 }
 
-#team139 {
+.team139 {
   // TB
   background: #00285D;
   color: #9ECEEE;
 }
 
-#team140 {
+.team140 {
   // TEX
   background: #BD1021;
   color: #003279;
 }
 
-#team141 {
+.team141 {
   // TOR
   background: #003DA5;
   color: #041E42;
 }
 
-#team142 {
+.team142 {
   // MIN
   background: #072754;
   color: #C6011F;
 }
 
-#team143 {
+.team143 {
   // PHI
   background: #BA0C2F;
   color: #003087;
 }
 
-#team144 {
+.team144 {
   // ATL
   background: #002F5F;
   color: #B71234;
 }
 
-#team145 {
+.team145 {
   // CWS
   background: #000;
   color: #C0C0C0;
 }
 
-#team146 {
+.team146 {
   // MIA
   background: #000;
   color: #F9423A;
 }
 
-#team147 {
+.team147 {
   // NYY
   background: #1C2841;
   color: #FFF;
 }
 
-#team158 {
+.team158 {
   // MIL
   background: #182B49;
   color: #92754C;
