@@ -62,14 +62,9 @@ class Batter < ActiveRecord::Base
     end
 
     def qualified_atbats
-      Batter.all.each do |batter|
-        if batter.batter_stat.tpa >= batter.batter_stat.league_games * 3.1
-          batter.batter_stat.qualified = true
-          batter.batter_stat.save!
-        else
-          batter.batter_stat.qualified = false
-          batter.batter_stat.save!
-        end
+      Batter.includes(:batter_stat).only(:tpa, :league_games, :qualified).each do |batter|
+        batter.batter_stat.qualified = batter.batter_stat.tpa >= batter.batter_stat.league_games * 3.1
+        batter.batter_stat.save!
       end
     end
 
@@ -77,7 +72,7 @@ class Batter < ActiveRecord::Base
       max = self.league_average.to_d + 0.050
       min = self.league_average.to_d - 0.050
       average_list = {}
-      Batter.all.each do |batter|
+      Batter.includes(:batter_stat).only(:qualified, :avg_sort).each do |batter|
         if batter.batter_stat.qualified
           if batter.batter_stat.avg_sort.to_d.between?(min, max)
             average_list[batter.id] = batter.batter_stat.avg_sort

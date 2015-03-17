@@ -29,8 +29,8 @@ gem 'rails_12factor', group: :production
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem 'annotate', github: 'ctran/annotate_models'
   gem 'rb-readline'
+  gem 'bullet'
 end
 
 group :development, :test do
