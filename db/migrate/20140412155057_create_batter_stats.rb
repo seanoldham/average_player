@@ -23,6 +23,9 @@ class CreateBatterStats < ActiveRecord::Migration
       t.integer :go, null: false
       t.integer :ao, null: false
       t.integer :tpa, null: false
+      t.integer :league_games
+      t.boolean :qualified
+      t.decimal :avg_sort
       t.timestamps
     end
     add_index :batter_stats, :batter_id, unique: true

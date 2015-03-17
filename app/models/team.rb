@@ -1,15 +1,3 @@
-# == Schema Information
-#
-# Table name: teams
-#
-#  id         :integer          not null, primary key
-#  league_id  :integer          not null
-#  name       :string           not null
-#  abbrev     :string           not null
-#  created_at :datetime
-#  updated_at :datetime
-#
-
 # After scraping, save team info to db
 class Team < ActiveRecord::Base
   self.primary_key = :id

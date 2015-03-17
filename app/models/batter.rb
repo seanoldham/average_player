@@ -1,19 +1,3 @@
-# == Schema Information
-#
-# Table name: batters
-#
-#  id            :integer          not null, primary key
-#  first_name    :string           not null
-#  last_name     :string           not null
-#  bats          :integer          not null
-#  throws        :integer          not null
-#  pos           :integer          not null
-#  jersey_number :integer
-#  team_id       :integer          not null
-#  created_at    :datetime
-#  updated_at    :datetime
-#
-
 # after scraping, save batter attributes to db. calculate rest of stats
 class Batter < ActiveRecord::Base
   self.primary_key = 'id'
@@ -53,6 +37,13 @@ class Batter < ActiveRecord::Base
         attr = normarize(b.attributes)
         batter = find_or_initialize_by(id: attr[:id])
         batter.update!(attr)
+      end
+    end
+
+    def qualified_default
+      Batter.includes(:batter_stat).only(:qualified).each do |batter|
+        batter.batter_stat.qualified = false
+        batter.batter_stat.save!
       end
     end
 
