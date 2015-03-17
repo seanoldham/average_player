@@ -12,7 +12,6 @@ class TeamsController < ApplicationController
   def snapshot
     %x(bundle exec rake scrape:all)
     @avg = Batter.league_average.round(3).to_s[1..-1]
-    @default_qualified = Batter.qualified_default
     @qualified = Batter.qualified_atbats
     @average_list = Batter.find_average_batters
     @snapshot = Batter.save_snapshot

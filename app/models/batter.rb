@@ -40,13 +40,6 @@ class Batter < ActiveRecord::Base
       end
     end
 
-    def qualified_default
-      Batter.includes(:batter_stat).only(:qualified).each do |batter|
-        batter.batter_stat.qualified = false
-        batter.batter_stat.save!
-      end
-    end
-
     def league_average
       total_atbats = Batter.all.includes(:batter_stat).sum(:ab).to_d
       total_hits = Batter.all.includes(:batter_stat).sum(:h).to_d

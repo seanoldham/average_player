@@ -24,7 +24,7 @@ class CreateBatterStats < ActiveRecord::Migration
       t.integer :ao, null: false
       t.integer :tpa, null: false
       t.integer :league_games
-      t.boolean :qualified
+      t.boolean :qualified, :default => false
       t.decimal :avg_sort
       t.timestamps
     end
