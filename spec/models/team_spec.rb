@@ -23,8 +23,8 @@ describe Team do
     }
 
     it do
-      Team.attribute_names.map(&:to_sym).
-        reject{|a| a == :created_at || a == :updated_at}.each do |e|
+      Team.attribute_names.map(&:to_sym)
+        .reject { |a| a == :created_at || a == :updated_at }.each do |e|
         expect(Team.send(:normarize, attr)).to include e
       end
     end

@@ -45,7 +45,7 @@ describe BatterStat do
 
     it do
       BatterStat.attribute_names.map(&:to_sym).
-        reject{|a| a == :id || a == :created_at || a == :updated_at}.each do |e|
+        reject{ |a| a == :id || a == :created_at || a == :updated_at }.each do |e|
 
         expect( BatterStat.send(:normarize, attr) ).to include e
       end

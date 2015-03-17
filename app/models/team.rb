@@ -10,6 +10,7 @@
 #  updated_at :datetime
 #
 
+# After scraping, save team info to db
 class Team < ActiveRecord::Base
   self.primary_key = :id
   include Scrapable

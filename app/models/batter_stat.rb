@@ -32,6 +32,7 @@
 #  qualified       :boolean          default("true")
 #
 
+# after scraping, saves batter's stats to db
 class BatterStat < ActiveRecord::Base
   include Scrapable
   belongs_to :batter
@@ -52,9 +53,9 @@ class BatterStat < ActiveRecord::Base
       attr.each do |_, v|
         key = v.name.downcase
         v = v.value
-        key = 'batter_' + key if key == "id"
-        normarized[key.to_sym] = v.to_d if BatterStat.
-          attribute_names.include? key
+        key = 'batter_' + key if key == 'id'
+        normarized[key.to_sym] = v.to_d if BatterStat
+          .attribute_names.include? key
       end
       normarized
     end

@@ -26,9 +26,9 @@ describe Batter do
     }
 
     it do
-      Batter.attribute_names.map(&:to_sym).
-        reject{|attr| attr == :created_at || attr == :updated_at}.each do |e|
-        expect( Batter.send(:normarize, attr) ).to include e
+      Batter.attribute_names.map(&:to_sym)
+        .reject { |attr| attr == :created_at || attr == :updated_at }.each do |e|
+        expect(Batter.send(:normarize, attr)).to include e
       end
     end
   end

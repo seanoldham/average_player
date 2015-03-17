@@ -14,6 +14,7 @@
 #  updated_at    :datetime
 #
 
+# after scraping, save batter attributes to db. calculate rest of stats
 class Batter < ActiveRecord::Base
   self.primary_key = 'id'
   belongs_to :team
@@ -58,7 +59,7 @@ class Batter < ActiveRecord::Base
     def league_average
       total_atbats = Batter.all.includes(:batter_stat).sum(:ab).to_d
       total_hits = Batter.all.includes(:batter_stat).sum(:h).to_d
-      return total_average = total_hits / total_atbats
+      total_hits / total_atbats
     end
 
     def qualified_atbats
@@ -69,8 +70,8 @@ class Batter < ActiveRecord::Base
     end
 
     def find_average_batters
-      max = self.league_average.to_d + 0.050
-      min = self.league_average.to_d - 0.050
+      max = league_average.to_d + 0.050
+      min = league_average.to_d - 0.050
       average_list = {}
       Batter.includes(:batter_stat).only(:qualified, :avg_sort).each do |batter|
         if batter.batter_stat.qualified
@@ -79,28 +80,27 @@ class Batter < ActiveRecord::Base
           end
         end
       end
-      return average_list
+      average_list
     end
 
     def find_mr_average
-      # Iterate through the hash and find the absolute value difference between the current value and the league average. I can create a variable to hold the lowest value, but how do I know which batter ID "wins"?
       diff = 100.0
       winner_id = 0
-      self.find_average_batters.each do |k,v|
-        math = (v - self.league_average).abs
+      find_average_batters.each do |k, v|
+        math = (v - league_average).abs
         if math < diff
           diff = math
           winner_id = k
         end
       end
-      return winner_id
+      winner_id
     end
 
     def save_snapshot
-      self.find_average_batters
+      find_average_batters
       new_snapshot = Snapshot.new
-      new_snapshot.league_average = self.league_average
-      new_snapshot.mr_average_id = self.find_mr_average
+      new_snapshot.league_average = league_average
+      new_snapshot.mr_average_id = find_mr_average
       new_snapshot.save!
     end
 
@@ -118,7 +118,7 @@ class Batter < ActiveRecord::Base
       normarized
     end
 
-    def name_to_first_name(k, v)
+    def name_to_first_name(_k, v)
       v = v.gsub!(/\s.*/, '')
       ['first_name', v]
     end
