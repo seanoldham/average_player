@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20150308152536) do
     t.string   "last_name",               null: false
     t.integer  "bats",          limit: 2, null: false
     t.integer  "throws",        limit: 2, null: false
-    t.integer  "pos",           limit: 2, null: false
+    t.integer  "pos",           limit: 2
     t.integer  "jersey_number"
     t.integer  "team_id",                 null: false
     t.datetime "created_at"

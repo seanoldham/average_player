@@ -29,7 +29,7 @@ namespace :scrape do
   def get_doc(&block)
     TEAM_ID.each do |team_id|
       uri = BASE_URL +
-        "components/team/stats/year_2014/#{team_id}-stats.xml"
+        "components/team/stats/year_2015/#{team_id}-stats.xml"
       doc = Nokogiri::XML.parse(open(uri)).css('TeamStats')
       yield doc
     end

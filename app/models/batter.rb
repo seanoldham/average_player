@@ -58,11 +58,11 @@ class Batter < ActiveRecord::Base
       min = league_average.to_d - 0.050
       average_list = {}
       Batter.includes(:batter_stat).only(:qualified, :avg_sort).each do |batter|
-        if batter.batter_stat.qualified
+        # if batter.batter_stat.qualified
           if batter.batter_stat.avg_sort.to_d.between?(min, max)
             average_list[batter.id] = batter.batter_stat.avg_sort
           end
-        end
+        # end
       end
       average_list
     end

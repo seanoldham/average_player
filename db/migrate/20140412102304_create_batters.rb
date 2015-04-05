@@ -6,7 +6,7 @@ class CreateBatters < ActiveRecord::Migration
       t.string :last_name, null: false
       t.integer :bats, limit: 1, null: false
       t.integer :throws, limit: 1, null: false
-      t.integer :pos, limit: 1, null: false
+      t.integer :pos, limit: 1
       t.integer :jersey_number
       t.belongs_to :team, null: false
       t.timestamps
