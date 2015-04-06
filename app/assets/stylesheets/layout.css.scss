@@ -48,6 +48,10 @@ body.single-pane {
   transform: translate(-50%, -50%);
 }
 
+#mr-average a {
+  text-decoration: none;
+}
+
 #links {
   width: 100%;
   font-size: 2em;
@@ -68,7 +72,12 @@ body.single-pane {
   position: relative;
 }
 
-#tooltip {
+.popover-title {
+  background-opacity: 0.4;
+}
+
+.popover-content {
+  background-opacity: 0.4;
 }
 
 .team108 {

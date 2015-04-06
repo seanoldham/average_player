@@ -12,6 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require bootstrap/bootstrap-tooltip
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  $('.has-tooltip').tooltip();
+  $('.has-popover').popover({
+    trigger: 'hover',
+    html: true
+  });
+});
