@@ -72,12 +72,19 @@ body.single-pane {
   position: relative;
 }
 
+.popover {
+  background-color: rgba(255,255,255,0.05) !important;
+  max-width: 500px !important;
+}
+
 .popover-title {
-  background-opacity: 0.4;
+  font-size: 2em !important;
+  background-color: rgba(247, 247, 247, 0.05) !important;
+  border-bottom: 1px solid rgba(235, 235, 235, 0.05) !important;
 }
 
 .popover-content {
-  background-opacity: 0.4;
+  font-size: 2em !important;
 }
 
 .team108 {
