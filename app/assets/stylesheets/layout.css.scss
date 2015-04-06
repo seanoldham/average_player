@@ -49,13 +49,13 @@ body.single-pane {
 }
 
 #mr-average a {
-  color: unset !important;
+  color: !important;
   text-decoration: none;
 }
 
 a:hover a:focus {
-  color: unset !important;
-  text-decoration: none;
+  color: !important;
+  text-decoration: none !important;
 }
 
 #links {
