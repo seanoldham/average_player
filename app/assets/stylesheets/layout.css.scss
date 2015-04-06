@@ -74,17 +74,17 @@ body.single-pane {
 
 .popover {
   background-color: rgba(255,255,255,0.05) !important;
-  max-width: 500px !important;
+  max-width: 600px !important;
 }
 
 .popover .arrow {
-  color: rgba(255,255,255,0.05) !important;
+  display: none !important;
 }
 
 .popover-title {
   font-size: 2em !important;
-  background-color: rgba(247, 247, 247, 0.05) !important;
-  border-bottom: 1px solid rgba(235, 235, 235, 0.05) !important;
+  background-color: rgba(247,247,247,0.05) !important;
+  border-bottom: 1px solid rgba(235,235,235,0.05) !important;
 }
 
 .popover-content {
