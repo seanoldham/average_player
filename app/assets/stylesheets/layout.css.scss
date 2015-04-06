@@ -48,8 +48,13 @@ body.single-pane {
   transform: translate(-50%, -50%);
 }
 
-#mr-average a:hover {
-  color: !important;
+#mr-average a {
+  color: unset !important;
+  text-decoration: none;
+}
+
+a:hover a:focus {
+  color: unset !important;
   text-decoration: none;
 }
 
