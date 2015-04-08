@@ -49,7 +49,7 @@ body.single-pane {
 }
 
 #mr-average a {
-  color: !important;
+  color: inherit !important;
   text-decoration: none;
 }
 
@@ -73,6 +73,7 @@ a:hover a:focus {
 }
 
 #links a {
+  color: inherit !important;
   text-decoration: none;
   font-style: italic;
   position: relative;
