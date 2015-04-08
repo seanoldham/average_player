@@ -20,7 +20,7 @@
 $(document).ready(function() {
   $('.has-tooltip').tooltip();
   $('[data-toggle="popover"]').popover({
-    trigger: 'focus',
+    trigger: 'click',
     html: true
   });
 });
