@@ -19,7 +19,7 @@
 
 $(document).ready(function() {
   $('.has-tooltip').tooltip();
-  $('.has-popover').popover({
+  $('[data-toggle="popover"]').popover({
     trigger: 'hover',
     html: true
   });
