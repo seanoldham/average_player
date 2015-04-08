@@ -1,4 +1,4 @@
-<strong>AVG</strong>: <%= @find_mr_average.batter_stat.avg_sort.to_s[1..4] %>&nbsp;
+<strong>AVG</strong>: <%= number_with_precision(@find_mr_average.batter_stat.avg_sort, precision: 3).to_s[1..-1] %>&nbsp;
 <strong>H</strong>: <%= @find_mr_average.batter_stat.h %>&nbsp;
 <strong>R</strong>: <%= @find_mr_average.batter_stat.r %>&nbsp;
 <strong>HR</strong>: <%= @find_mr_average.batter_stat.hr %>&nbsp;
