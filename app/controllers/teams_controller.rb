@@ -11,7 +11,7 @@ class TeamsController < ApplicationController
 
   def yesterday
     yesterday_snapshot = Snapshot.find_by "created_at < ?", Date.today
-    @find_mr_average = Batter.find_by_id(yesterday_snapshot.mr_average_id)
+    @find_yesterday_mr_average = Batter.find_by_id(yesterday_snapshot.mr_average_id)
   end
 
   def snapshot
