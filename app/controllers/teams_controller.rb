@@ -9,6 +9,11 @@ class TeamsController < ApplicationController
     @batters = @team.batters
   end
 
+  def yesterday
+    yesterday_snapshot = Snapshot.find_by "created_at < ?", Date.today
+    @find_mr_average = Batter.find_by_id(yesterday_snapshot.mr_average_id)
+  end
+
   def snapshot
     %x[rake scrape:all]
     @avg = Batter.league_average.round(3).to_s[1..-1]
