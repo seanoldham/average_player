@@ -10,14 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
     <%= csrf_meta_tags %>
-    <script type="text/javascript">
-      (function() {
-        window.PA_SITE_ID = 7499162203258;
-        var u='//api.pleasant.io/';
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'pleasant.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
   </head>
   <%= yield %>
 </html>
