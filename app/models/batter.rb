@@ -47,7 +47,7 @@ class Batter < ActiveRecord::Base
     end
 
     def qualified_atbats
-      opening_day = Date.parse("2016-04-04")
+      opening_day = Date.parse("2017-04-03")
       days_since_opening_day = (Date.today - opening_day).to_i
       Batter.includes(:batter_stat).only(:tpa, :qualified).each do |batter|
         batter.batter_stat.qualified = batter.batter_stat.tpa >= days_since_opening_day * 3
