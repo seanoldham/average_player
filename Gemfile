@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.8'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'rails_12factor', group: :production
 
 group :development do
-  gem 'spring'
+  gem 'spring', '~> 2.0.1'
   gem 'spring-commands-rspec'
   gem 'rb-readline'
   gem 'bullet'
