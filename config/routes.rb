@@ -9,11 +9,6 @@
 
 Rails.application.routes.draw do
   root 'teams#index'
-
-  resources :teams
-
-  match '/yesterday', to: 'teams#yesterday', via: 'get', as: 'yesterday'
-  match '/snapshot', to: 'teams#snapshot', via: 'get', as: 'snapshot'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
