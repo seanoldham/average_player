@@ -4,7 +4,7 @@ namespace :scrape do
   TEAM_ID = ((108..121).to_a + (133..147).to_a + [158]).freeze
 
   desc 'get all'
-  task all: ['team:get', 'batter:get']
+  task all: ['team:get', 'batter:get', 'data:get']
 
   namespace :team do
     desc 'get Team'
@@ -23,6 +23,16 @@ namespace :scrape do
         Batter.create_or_update(batter)
         BatterStat.create_or_update(batter)
       end
+    end
+  end
+
+  namespace :data do
+    desc 'crunch numbers'
+    task get: :environment do
+      @avg = Batter.league_average.round(3).to_s[1..-1]
+      @qualified = Batter.qualified_atbats
+      @average_list = Batter.find_average_batters
+      @snapshot = Batter.save_snapshot
     end
   end
 
