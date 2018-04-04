@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
 
 body {
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
 }
 
 body.single-pane {
@@ -21,9 +21,15 @@ body.single-pane {
   margin-bottom: 40px !important;
 }
 
-.al-l { text-align: left; }
-.al-c { text-align: center; }
-.al-r { text-align: right;  }
+.al-l {
+  text-align: left;
+}
+.al-c {
+  text-align: center;
+}
+.al-r {
+  text-align: right;
+}
 
 .page-title-h4 {
   margin-bottom: 10px;
@@ -101,7 +107,7 @@ a:hover a:focus {
 }
 
 .popover {
-  background-color: rgba(255,255,255,0.05) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
   max-width: 600px !important;
 }
 
@@ -112,8 +118,8 @@ a:hover a:focus {
 .popover-title {
   text-align: center !important;
   font-size: 2em !important;
-  background-color: rgba(247,247,247,0.05) !important;
-  border-bottom: 1px solid rgba(235,235,235,0.05) !important;
+  background-color: rgba(247, 247, 247, 0.05) !important;
+  border-bottom: 1px solid rgba(235, 235, 235, 0.05) !important;
 }
 
 .popover-content {
@@ -123,44 +129,44 @@ a:hover a:focus {
 
 .team108 {
   // LAA
-  background: #B71234;
+  background: #b71234;
   color: #fff;
 }
 
 .team109 {
   // ARI
-  background: #A71930;
+  background: #a71930;
   color: #000;
 }
 
 .team110 {
   // BAL
-  background: #ED4C09;
+  background: #ed4c09;
   color: #000;
 }
 
-.team111{
+.team111 {
   // BOS
-  background: #C60C30;
+  background: #c60c30;
   color: #002244;
 }
 
 .team112 {
   // CHC
   background: #003279;
-  color: #CC0033;
+  color: #cc0033;
 }
 
 .team113 {
   // CIN
-  background: #C6011F;
+  background: #c6011f;
   color: #fff;
 }
 
 .team114 {
   // CLE
   background: #003366;
-  color: #D30335;
+  color: #d30335;
 }
 
 .team115 {
@@ -172,131 +178,131 @@ a:hover a:focus {
 .team116 {
   // DET
   background: #001742;
-  color: #DE4406;
+  color: #de4406;
 }
 
 .team117 {
   // HOU
   background: #072854;
-  color: #FF7F00;
+  color: #ff7f00;
 }
 
 .team118 {
   // KC
-  background: #15317E;
-  color: #74B4FA;
+  background: #15317e;
+  color: #74b4fa;
 }
 
 .team119 {
   // LAD
-  background: #083C6B;
-  color: #FFF;
+  background: #083c6b;
+  color: #fff;
 }
 
 .team120 {
   // WSH
-  background: #BA122B;
-  color: #11225B;
+  background: #ba122b;
+  color: #11225b;
 }
 
 .team121 {
   //NYM
-  background: #002C77;
-  color: #FB4F14;
+  background: #002c77;
+  color: #fb4f14;
 }
 
 .team133 {
   // OAK
   background: #003831;
-  color: #FFD800;
+  color: #ffd800;
 }
 
 .team134 {
   // PIT
-  background: #FDB829;
+  background: #fdb829;
   color: #000;
 }
 
 .team135 {
   // SD
   background: #002147;
-  color: #B4A76C;
+  color: #b4a76c;
 }
 
 .team136 {
   // SEA
-  background: #0C2C56;
-  color: #005C5C;
+  background: #0c2c56;
+  color: #005c5c;
 }
 
 .team137 {
   // SF
-  background: #F2552C;
+  background: #f2552c;
   color: #000;
 }
 
 .team138 {
   // STL
-  background: #C41E3A;
-  color: #FFF;
+  background: #c41e3a;
+  color: #fff;
 }
 
 .team139 {
   // TB
-  background: #00285D;
-  color: #9ECEEE;
+  background: #00285d;
+  color: #9eceee;
 }
 
 .team140 {
   // TEX
-  background: #BD1021;
+  background: #bd1021;
   color: #003279;
 }
 
 .team141 {
   // TOR
-  background: #003DA5;
-  color: #041E42;
+  background: #003da5;
+  color: #041e42;
 }
 
 .team142 {
   // MIN
   background: #072754;
-  color: #C6011F;
+  color: #c6011f;
 }
 
 .team143 {
   // PHI
-  background: #BA0C2F;
-  color: #003087;
+  background: #ba0c2f;
+  color: #ffffff;
 }
 
 .team144 {
   // ATL
-  background: #002F5F;
-  color: #B71234;
+  background: #002f5f;
+  color: #b71234;
 }
 
 .team145 {
   // CWS
   background: #000;
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 .team146 {
   // MIA
   background: #000;
-  color: #F9423A;
+  color: #f9423a;
 }
 
 .team147 {
   // NYY
-  background: #1C2841;
-  color: #FFF;
+  background: #1c2841;
+  color: #fff;
 }
 
 .team158 {
   // MIL
-  background: #182B49;
-  color: #92754C;
+  background: #182b49;
+  color: #92754c;
 }
